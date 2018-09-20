@@ -1,0 +1,584 @@
+:root {
+  --nav: #23B8B0;
+  --primary: #BDD3D2;
+  --text: #2E4B37;
+  --shadow: 0 10px 6px -6px #777;
+}
+
+html,body {
+  margin:0px;
+  padding:0px;
+  font-family:Arial;
+  line-height:25px;
+  color:var(--text);
+  transition:0.3s all ;
+}
+
+a,h1,h2,h3,h4,h5,h6,ul,li
+{
+  margin:0px;
+  padding:0px;
+  text-decoration:none;
+  list-style:none;
+}
+
+.container {
+  max-width:1000px;
+  margin:auto;
+}
+
+
+nav {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  padding:1rem;
+ 
+  .menu a {
+    color:var(--text);
+    padding: 5px 10px;
+    font-size:14px;
+  }
+
+  .current {
+    color:#ccc;
+  }
+
+  #toggle {
+    display:none;
+  }
+
+  label {
+    font-size:28px;
+    display:none;
+  }
+
+  
+}
+
+
+
+
+
+.banner {
+  background:url('https://cdn.pixabay.com/photo/2016/11/14/03/04/hospital-1822457_960_720.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:500px;
+  
+  .header {
+    max-width:800px;
+    margin:auto;
+    padding-top:150px;
+    color:var(--text);
+    .box {
+      background:white;
+      padding:2rem;
+      h1 {
+        font-size:34px;
+      }
+      p {
+        font-size:16px;
+        opacity:0.8;
+        margin-bottom:20px;
+      }
+    }
+    
+    .btn {
+      background:var(--text);
+      color:white;
+      padding:10px;
+      font-size:14px;
+    }
+  }
+}
+
+
+.services {
+  text-align:center;
+  margin-top:100px;
+  
+  .ser {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    grid-gap:100px;
+    margin-top:100px;
+    img{
+      width: 100%;
+    }
+    .btn {
+      background:var(--text);
+      color:white;
+      padding:10px;
+      font-size:12px;
+    }
+    p {
+      font-size:14px;
+      text-align:left;
+      opacity:0.8;
+    }
+    hr {
+      opacity:0.5;
+    }
+  }
+}
+
+.about {
+  margin-top:150px;
+  p {
+    font-size:16px;
+    opacity:0.8;
+    line-height:25px;
+  }
+  
+  .btn {
+    
+      background:var(--text);
+      color:white;
+      padding:10px;
+      font-size:12px;
+    }
+}
+
+footer {
+  margin-top:100px;
+}
+
+footer {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:var(--primary);
+  .line {
+    width:1px;
+    height:30px;
+    background:var(--text);
+    margin-left:20px;
+  }
+  .navbar2 {
+    display:flex;
+    li {
+      margin-left:20px;
+    }
+    a {
+      color:var(--text);
+    }
+    
+  }
+}
+
+
+
+.apointment {
+  margin-top:100px;
+  background-color:var(--text);
+  padding:50px 10px;
+
+ 
+
+  .wrapper {
+    display:grid;
+    justify-content:center;
+    align-items:center;
+    grid-gap:50px;
+    grid-template-columns: 1fr 1fr;
+
+    .form-content{
+      color:white;
+    }
+
+    .form-box {
+      margin:15px 0px;
+    }
+    .btn {
+      background-color:white;
+      padding:10px 20px;
+      border-radius:4px;
+      color:var(--text);
+      font-weight:bold;
+    }
+  }
+
+  label {
+    color:white;
+    font-size:14px;
+  }
+
+  input, textarea{
+    border: none;
+    border-bottom: 1px solid white;
+    height: 55px;
+    border-radius: 0px;
+    background: none;
+    color: #fff ;
+    font-size: 16px;
+    outline:none;
+    width:92%;
+    padding: .3rem .55rem;
+  }
+
+  
+
+}
+
+
+
+
+/* department file css */
+
+
+.facilities {
+  
+  margin-top:100px;
+  .wrapper {
+    margin-top:100px;
+    display:grid;
+    grid-gap:10px;
+    grid-template-areas: 
+    'departmentBox departmentBox departmentSideNav';
+    ;
+
+    .department-box {
+      padding:1rem;
+      grid-area: departmentBox;
+      img {
+        width:100%;
+      }
+      p {
+        font-size:14px; 
+      }
+     
+    }
+    .department-side-nav {
+      grid-area:departmentSideNav;
+      background:var(--text);
+      color:white;
+      padding:1rem;
+     
+      ul {
+          margin-top:2rem;
+          width:100%;
+
+          li {
+            width:100%;
+          }
+        a {
+          
+          line-height:40px;
+          width:100%;
+          font-size:12px;
+          color:white;
+          
+        }
+      }
+     
+    }
+  }
+
+
+}
+
+
+.offredServices {
+  margin-top:100px;
+  .wrapper  {
+    display:grid;
+    grid-template-areas: 
+    'serbox serbox serhour';
+
+    .service-boxes {
+
+      grid-area:serbox;
+      display:flex;
+    }
+    .ser-hour {
+      grid-area:serhour;
+      background:var(--text);
+      color:white;
+      padding:1.5rem;
+      font-size:12px;
+      h2 {
+        margin-bottom:1rem;
+        font-size:24px;
+      }
+      li {
+        width:100%;
+      }
+      p {
+        line-height:20px;
+      }
+    }
+  }
+
+
+}
+
+
+.aboutus {
+  margin-top:100px;
+  img {
+    width:100%;
+  }
+}
+.team {
+  margin-top:100px;
+  text-align:center;
+  .wrapper .docs{
+    display:grid;
+    grid-gap:20px;
+    grid-template-columns:1fr 1fr 1fr;
+    
+    img {
+      width:100%;
+
+    }
+  }
+}
+
+
+
+.contact {
+  padding:4rem;
+  margin-top:100px;
+  background:var(--primary);
+  .wrapper {
+    display:grid;
+    grid-gap:50px;
+    grid-template-columns: 1fr 1fr;
+    align-items:center;
+    
+  }
+}
+.contact-form {
+  
+  
+  form input {
+    width:400px;
+    height:25px;
+    padding:5px;
+    margin-top:1.5rem;
+    outline: none;
+  }
+
+  textarea{
+    margin-top:1.5rem;
+    padding:5px;
+    width:400px;
+    outline: none;
+    margin-bottom:20px;
+  }
+
+  .btn {
+    
+    background: var(--text);
+    color:white;
+    padding:10px 20px;
+  }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+
+ .banner {
+  height: 400px;
+ }
+
+
+ nav {
+  transition:all 0.3s ease-in-out;
+  display:block;
+    .menu {
+      display:none;
+      flex-direction:column;
+      text-align:center;
+      transition:all 0.3s ease-in-out;
+      
+    }
+
+    .menu a {
+      padding:10px 0px;
+      width:100%;
+      border-bottom:1px solid var(--primary);
+      transition:all 0.3s ease-in-out;
+
+    }
+
+    .menu a:hover {
+      background-color:var(--text);
+      color:white;
+      padding:15px 0px;
+    }
+   
+
+    label {
+      display:block;
+      position:absolute;
+      right:0;
+      top:0;
+      margin:15px;
+      cursor:pointer;
+    }
+ }
+
+
+#toggle:checked + .menu {
+  display:flex;
+  transition:all 0.3s ease-in-out;
+}
+
+
+
+
+  .header {
+        h1 {
+          font-size:20px;
+          line-height:40px;
+        }     
+      }
+
+
+  .services {
+    margin-top:0px;
+    .ser {
+      display:flex;
+      flex-direction:column;
+      img {
+        display:none;
+      }
+    }
+    
+    .content {
+      
+      padding:2rem;
+    }
+  }
+  
+  .about {
+    padding:2rem;
+  }
+  
+  
+  .banner {
+    background:none;
+    .header {
+      position:relative;
+      padding-top:10px;
+      .box{
+        padding:10px;
+        h1 {
+          font-size:28px;
+        }
+      }
+    }
+
+  }
+.apointment {
+  .wrapper {
+    display:block;
+    .form-content {
+      margin-bottom:3rem;
+    }
+  }
+}
+
+  .facilities {
+    margin-top:0px;
+    .wrapper {
+      grid-template-areas: 
+      'departmentBox '
+      'departmentSideNav';
+      
+      .department-side-nav {
+        text-align:center;
+      }
+    }
+  }
+
+
+  .offredServices {
+    margin-top:0px;
+    .wrapper  {
+      display:grid;
+      grid-template-areas: 
+      'serbox'
+      'serhour';
+
+      .ser-hour {
+        text-align:center;
+      }
+      
+      .service-boxes {
+      margin-top:50px;
+      text-align:center;
+      display:block;
+      }
+
+    }
+  }
+
+
+  .aboutus {
+    margin-top:0px;
+    padding:1rem;
+  }
+
+  .team {
+    .wrapper .docs {
+
+       grid-template-columns:1fr;
+    }
+  }
+
+
+  .contact {
+    text-align:center;
+    margin-top:100px;
+    background:var(--primary);
+    .wrapper {
+      display:grid;
+      grid-gap:0px;
+      grid-template-columns: 1fr ;
+      align-items:center;
+      
+    }
+  }
+
+
+  .contact-form {
+    
+    width:100%;
+    margin-bottom:50px;
+    
+    form input {
+      width:300px;
+      height:25px;
+      padding:0px;
+      margin-top:1.5rem;
+      outline: none;
+    }
+  
+    textarea{
+      margin-top:1.5rem;
+      padding:0px;
+      width:300px;
+      outline: none;
+      margin-bottom:20px;
+    }
+  
+    .btn {
+      
+      background: var(--text);
+      color:white;
+      padding:10px 20px;
+    }
+  }
+  
+  
+
+}
+

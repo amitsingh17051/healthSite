@@ -1,0 +1,360 @@
+:root {
+  --nav: #23B8B0;
+  --primary: #BDD3D2;
+  --text: #2E4B37;
+  --shadow: 0 10px 6px -6px #777; }
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial;
+  line-height: 25px;
+  color: var(--text);
+  transition: 0.3s all; }
+
+a, h1, h2, h3, h4, h5, h6, ul, li {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none; }
+
+.container {
+  max-width: 1000px;
+  margin: auto; }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem; }
+  nav .menu a {
+    color: var(--text);
+    padding: 5px 10px;
+    font-size: 14px; }
+  nav .current {
+    color: #ccc; }
+  nav #toggle {
+    display: none; }
+  nav label {
+    font-size: 28px;
+    display: none; }
+
+.banner {
+  background: url("https://cdn.pixabay.com/photo/2016/11/14/03/04/hospital-1822457_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px; }
+  .banner .header {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 150px;
+    color: var(--text); }
+    .banner .header .box {
+      background: white;
+      padding: 2rem; }
+      .banner .header .box h1 {
+        font-size: 34px; }
+      .banner .header .box p {
+        font-size: 16px;
+        opacity: 0.8;
+        margin-bottom: 20px; }
+    .banner .header .btn {
+      background: var(--text);
+      color: white;
+      padding: 10px;
+      font-size: 14px; }
+
+.services {
+  text-align: center;
+  margin-top: 100px; }
+  .services .ser {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 100px;
+    margin-top: 100px; }
+    .services .ser img {
+      width: 100%; }
+    .services .ser .btn {
+      background: var(--text);
+      color: white;
+      padding: 10px;
+      font-size: 12px; }
+    .services .ser p {
+      font-size: 14px;
+      text-align: left;
+      opacity: 0.8; }
+    .services .ser hr {
+      opacity: 0.5; }
+
+.about {
+  margin-top: 150px; }
+  .about p {
+    font-size: 16px;
+    opacity: 0.8;
+    line-height: 25px; }
+  .about .btn {
+    background: var(--text);
+    color: white;
+    padding: 10px;
+    font-size: 12px; }
+
+footer {
+  margin-top: 100px; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary); }
+  footer .line {
+    width: 1px;
+    height: 30px;
+    background: var(--text);
+    margin-left: 20px; }
+  footer .navbar2 {
+    display: flex; }
+    footer .navbar2 li {
+      margin-left: 20px; }
+    footer .navbar2 a {
+      color: var(--text); }
+
+.apointment {
+  margin-top: 100px;
+  background-color: var(--text);
+  padding: 50px 10px; }
+  .apointment .wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr; }
+    .apointment .wrapper .form-content {
+      color: white; }
+    .apointment .wrapper .form-box {
+      margin: 15px 0px; }
+    .apointment .wrapper .btn {
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      color: var(--text);
+      font-weight: bold; }
+  .apointment label {
+    color: white;
+    font-size: 14px; }
+  .apointment input, .apointment textarea {
+    border: none;
+    border-bottom: 1px solid white;
+    height: 55px;
+    border-radius: 0px;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    width: 92%;
+    padding: .3rem .55rem; }
+
+/* department file css */
+.facilities {
+  margin-top: 100px; }
+  .facilities .wrapper {
+    margin-top: 100px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 'departmentBox departmentBox departmentSideNav'; }
+    .facilities .wrapper .department-box {
+      padding: 1rem;
+      grid-area: departmentBox; }
+      .facilities .wrapper .department-box img {
+        width: 100%; }
+      .facilities .wrapper .department-box p {
+        font-size: 14px; }
+    .facilities .wrapper .department-side-nav {
+      grid-area: departmentSideNav;
+      background: var(--text);
+      color: white;
+      padding: 1rem; }
+      .facilities .wrapper .department-side-nav ul {
+        margin-top: 2rem;
+        width: 100%; }
+        .facilities .wrapper .department-side-nav ul li {
+          width: 100%; }
+        .facilities .wrapper .department-side-nav ul a {
+          line-height: 40px;
+          width: 100%;
+          font-size: 12px;
+          color: white; }
+
+.offredServices {
+  margin-top: 100px; }
+  .offredServices .wrapper {
+    display: grid;
+    grid-template-areas: 'serbox serbox serhour'; }
+    .offredServices .wrapper .service-boxes {
+      grid-area: serbox;
+      display: flex; }
+    .offredServices .wrapper .ser-hour {
+      grid-area: serhour;
+      background: var(--text);
+      color: white;
+      padding: 1.5rem;
+      font-size: 12px; }
+      .offredServices .wrapper .ser-hour h2 {
+        margin-bottom: 1rem;
+        font-size: 24px; }
+      .offredServices .wrapper .ser-hour li {
+        width: 100%; }
+      .offredServices .wrapper .ser-hour p {
+        line-height: 20px; }
+
+.aboutus {
+  margin-top: 100px; }
+  .aboutus img {
+    width: 100%; }
+
+.team {
+  margin-top: 100px;
+  text-align: center; }
+  .team .wrapper .docs {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .team .wrapper .docs img {
+      width: 100%; }
+
+.contact {
+  padding: 4rem;
+  margin-top: 100px;
+  background: var(--primary); }
+  .contact .wrapper {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center; }
+
+.contact-form form input {
+  width: 400px;
+  height: 25px;
+  padding: 5px;
+  margin-top: 1.5rem;
+  outline: none; }
+
+.contact-form textarea {
+  margin-top: 1.5rem;
+  padding: 5px;
+  width: 400px;
+  outline: none;
+  margin-bottom: 20px; }
+
+.contact-form .btn {
+  background: var(--text);
+  color: white;
+  padding: 10px 20px; }
+
+@media only screen and (max-width: 500px) {
+  .banner {
+    height: 400px; }
+  nav {
+    transition: all 0.3s ease-in-out;
+    display: block; }
+    nav .menu {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      transition: all 0.3s ease-in-out; }
+    nav .menu a {
+      padding: 10px 0px;
+      width: 100%;
+      border-bottom: 1px solid var(--primary);
+      transition: all 0.3s ease-in-out; }
+    nav .menu a:hover {
+      background-color: var(--text);
+      color: white;
+      padding: 15px 0px; }
+    nav label {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 15px;
+      cursor: pointer; }
+  #toggle:checked + .menu {
+    display: flex;
+    transition: all 0.3s ease-in-out; }
+  .header h1 {
+    font-size: 20px;
+    line-height: 40px; }
+  .services {
+    margin-top: 0px; }
+    .services .ser {
+      display: flex;
+      flex-direction: column; }
+      .services .ser img {
+        display: none; }
+    .services .content {
+      padding: 2rem; }
+  .about {
+    padding: 2rem; }
+  .banner {
+    background: none; }
+    .banner .header {
+      position: relative;
+      padding-top: 10px; }
+      .banner .header .box {
+        padding: 10px; }
+        .banner .header .box h1 {
+          font-size: 28px; }
+  .apointment .wrapper {
+    display: block; }
+    .apointment .wrapper .form-content {
+      margin-bottom: 3rem; }
+  .facilities {
+    margin-top: 0px; }
+    .facilities .wrapper {
+      grid-template-areas: 'departmentBox ' 'departmentSideNav'; }
+      .facilities .wrapper .department-side-nav {
+        text-align: center; }
+  .offredServices {
+    margin-top: 0px; }
+    .offredServices .wrapper {
+      display: grid;
+      grid-template-areas: 'serbox' 'serhour'; }
+      .offredServices .wrapper .ser-hour {
+        text-align: center; }
+      .offredServices .wrapper .service-boxes {
+        margin-top: 50px;
+        text-align: center;
+        display: block; }
+  .aboutus {
+    margin-top: 0px;
+    padding: 1rem; }
+  .team .wrapper .docs {
+    grid-template-columns: 1fr; }
+  .contact {
+    text-align: center;
+    margin-top: 100px;
+    background: var(--primary); }
+    .contact .wrapper {
+      display: grid;
+      grid-gap: 0px;
+      grid-template-columns: 1fr;
+      align-items: center; }
+  .contact-form {
+    width: 100%;
+    margin-bottom: 50px; }
+    .contact-form form input {
+      width: 300px;
+      height: 25px;
+      padding: 0px;
+      margin-top: 1.5rem;
+      outline: none; }
+    .contact-form textarea {
+      margin-top: 1.5rem;
+      padding: 0px;
+      width: 300px;
+      outline: none;
+      margin-bottom: 20px; }
+    .contact-form .btn {
+      background: var(--text);
+      color: white;
+      padding: 10px 20px; } }
